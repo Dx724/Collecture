@@ -46,7 +46,7 @@
   border: 1px #cecece solid;
 }
 
-#searchBar:focus {
+#searchBar:focus, .dashboard-card:focus { /* Dash card focus used to prevent tag list from affecting outline shape */
   outline: none;
   box-shadow: 0px 0px 3px #0077ff;
 }
