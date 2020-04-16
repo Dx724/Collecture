@@ -4,6 +4,12 @@ import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { map, share } from 'rxjs/operators';
 
+export interface VideoJson {
+  title: string;
+  ytId: string;
+  tags: Array<string>;
+}
+
 @Injectable({
   providedIn: 'root'
 })

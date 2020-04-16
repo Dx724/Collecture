@@ -38,3 +38,10 @@
   height: 62%; /* Go from 4:3 to 16:9 */
   object-fit: cover;
 }
+
+#searchBar {
+  width: 100%;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: 1px #cecece solid;
+}

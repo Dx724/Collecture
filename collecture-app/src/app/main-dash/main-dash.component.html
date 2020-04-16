@@ -1,25 +1,27 @@
 <div class="grid-container">
-  <h1 class="mat-h1">Videos</h1>
+  <input id="searchBar" type="text" placeholder="Search..." (input)="doSearch($event)"/>
   <mat-grid-list [cols]="numCols" [rowHeight]="rowHeight">
-    <mat-grid-tile *ngFor="let card of lectCards | async; let idx = index" [colspan]="1" [rowspan]="1">
-      <mat-card class="dashboard-card" routerLink="viewLecture/{{idx}}">
-        <mat-card-header>
-          <mat-card-title class="titleText">
-            <p class="titleText">{{card.title}}</p>
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <img mat-card-image class="vidImage" [src]="'https://img.youtube.com/vi/' + card.ytId + '/0.jpg'" alt="Video Image"/>
-        <mat-card-footer class="dashboard-card-content">
-          <app-tag-list [tags]="card.tags"></app-tag-list>
-        </mat-card-footer>
-      </mat-card>
-    </mat-grid-tile>
+    <ng-container *ngFor="let card of lectCards | async; let idx = index">
+      <mat-grid-tile *ngIf="shouldShow(card.title)" [colspan]="1" [rowspan]="1">
+        <mat-card class="dashboard-card" routerLink="viewLecture/{{idx}}">
+          <mat-card-header>
+            <mat-card-title class="titleText">
+              <p class="titleText">{{card.title}}</p>
+              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Expand</button>
+                <button mat-menu-item>Remove</button>
+              </mat-menu>
+            </mat-card-title>
+          </mat-card-header>
+          <img mat-card-image class="vidImage" [src]="'https://img.youtube.com/vi/' + card.ytId + '/0.jpg'" alt="Video Image"/>
+          <mat-card-footer class="dashboard-card-content">
+            <app-tag-list [tags]="card.tags"></app-tag-list>
+          </mat-card-footer>
+        </mat-card>
+      </mat-grid-tile>
+    </ng-container>
   </mat-grid-list>
 </div>
