@@ -16,6 +16,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VideoViewComponent } from './video-view/video-view.component';
 import { TagListComponent } from './tag-list/tag-list.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TagListComponent } from './tag-list/tag-list.component';
     MainDashComponent,
     TopBarComponent,
     VideoViewComponent,
-    TagListComponent
+    TagListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
