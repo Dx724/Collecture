@@ -1,5 +1,4 @@
-<div class="grid-container">
-  <input id="searchBar" type="text" placeholder="Search..." (input)="doSearch($event)"/>
+<div class="grid-container" id="gridBox">
   <mat-grid-list [cols]="numCols" [rowHeight]="rowHeight">
     <ng-container *ngFor="let card of lectCards | async; let idx = index">
       <mat-grid-tile *ngIf="shouldShow(card.title, card.tags)" [colspan]="1" [rowspan]="1">

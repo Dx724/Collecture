@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LectureService } from '../lecture.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
-  constructor() { }
+  doSearch(onInputEvt) {
+    var searchTerms = onInputEvt.target.value.split(/[,; ]/);
+    searchTerms = searchTerms.filter(st => st.trim() != ""); //Remove empty terms so a comma at end of input doesn't return all
+    this.lectService.setSearchTerms(searchTerms);
+  }
+
+  constructor(private lectService: LectureService) { }
 
   ngOnInit(): void {
   }

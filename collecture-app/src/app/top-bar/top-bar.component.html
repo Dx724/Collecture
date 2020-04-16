@@ -1,5 +1,5 @@
 <mat-toolbar id="topBar">
     <span id="appTitle" routerLink="/" class="barLink" onfocus="this.blur()">Collecture</span>
-    <span id="leftRightSpacer"></span>
+    <input id="searchBar" type="text" placeholder="Search..." (input)="doSearch($event)"/>
     <span class="barLink" routerLink="/about" onfocus="this.blur()">About Us</span>
 </mat-toolbar>

@@ -17,6 +17,7 @@ export class MainDashComponent {
   rowHeight = ""; //Define this as an empty string to keep the cards as squares
   searchTerms = [""];
 
+  /*
   doSearch(onInputEvt) {
     this.searchTerms = onInputEvt.target.value.split(/[,; ]/);
     this.searchTerms = this.searchTerms.filter(st => st.trim() != ""); //Remove empty terms so a comma at end of input doesn't return all
@@ -32,11 +33,12 @@ export class MainDashComponent {
     //   })
     // );
   }
+  */
 
   tagSearchPrefix = "#"; //Also used to display tags in tag-list.component
 
   shouldShow(title, tags) {
-    console.log(this.searchTerms);
+    this.searchTerms = this.lectureService.getSearchTerms();
     if (this.searchTerms.length == 0 || (this.searchTerms.length == 1 && this.searchTerms[0].trim() == "")) return true; //Show all items for empty search
     for (var searchTerm of this.searchTerms) {
       searchTerm = searchTerm.trim().toLowerCase();
@@ -57,7 +59,7 @@ export class MainDashComponent {
     return true;
   }
 
-  constructor(private breakpointObserver: BreakpointObserver, lectureService: LectureService) {
+  constructor(private breakpointObserver: BreakpointObserver, private lectureService: LectureService) {
     this.breakpointObserver.observe(Breakpoints.Handset).subscribe(
       result => {this.numCols = result.matches ? 2 : 4;}
     );

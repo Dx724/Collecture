@@ -16,6 +16,15 @@ export interface VideoJson {
 export class LectureService {
   loadedData; //Only load once
   activeObservable;
+  currentSearchTerms = [];
+
+  getSearchTerms() {
+    return this.currentSearchTerms;
+  }
+
+  setSearchTerms(searchTerms) {
+    this.currentSearchTerms = searchTerms;
+  }
 
 
   getVideos() {
