@@ -40,7 +40,8 @@
 }
 
 #searchBar {
-  width: 100%;
+  width: calc(100% - 32px + 10px);
+  margin-left: calc(16px - 5px); /* Based on mat-card padding - 2 px for border + slight overhang*/
   font-size: 2rem;
   border-radius: 5px;
   border: 1px #cecece solid;

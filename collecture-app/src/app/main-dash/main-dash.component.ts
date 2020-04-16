@@ -33,23 +33,24 @@ export class MainDashComponent {
     // );
   }
 
-  tagSearchPrefix = "#";
+  tagSearchPrefix = "#"; //Also used to display tags in tag-list.component
 
   shouldShow(title, tags) {
     console.log(this.searchTerms);
     if (this.searchTerms.length == 0 || (this.searchTerms.length == 1 && this.searchTerms[0].trim() == "")) return true; //Show all items for empty search
     for (var searchTerm of this.searchTerms) {
       searchTerm = searchTerm.trim().toLowerCase();
-      if (!searchTerm.startsWith(this.tagSearchPrefix)) { //Normal search terms
+      if (!searchTerm.startsWith(this.tagSearchPrefix)) { //Normal search terms !searchTerm.startsWith(this.tagSearchPrefix)
         if (title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1) return false;
       }
       else { //Tags
         var tagValue = searchTerm.substring(this.tagSearchPrefix.length);
-        if (tagValue != "") {
+        if (tagValue != "" && title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1) {  //Can also match on title (so "Lecture #3" still matched) 
+          var tagMatched = false;
           for (var tag of tags) {
-            if (tag.toLowerCase().indexOf(tagValue) != -1) return true;
+            if (tag.toLowerCase().indexOf(tagValue) != -1) tagMatched = true;
           }
-          return false;
+          if (!tagMatched) return false;
         }
       }
     }

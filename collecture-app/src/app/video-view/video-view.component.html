@@ -3,7 +3,7 @@
     <div class="contentCenterer">
         <h3 id="vidTitle">{{videoInfo.title}}</h3>
         <iframe id="ytplayer" type="text/html" width="720" height="405"
-        [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+        [src]="videoUrl" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <app-tag-list [tags]="videoInfo.tags"></app-tag-list>
     </div>
 </div>

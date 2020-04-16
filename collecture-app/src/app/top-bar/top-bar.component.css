@@ -6,11 +6,18 @@
 
 #appTitle {
     font-size: 2rem;
-    padding: 1rem;
-    color: #464646;
-    cursor: pointer;
 }
 
-#appTitle:hover {
+#leftRightSpacer {
+    flex: 1 1 auto;
+}
+
+.barLink {
+    color: #464646;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.barLink:hover {
     color: #707070;
 }
