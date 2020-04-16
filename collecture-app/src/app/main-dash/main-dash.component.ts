@@ -18,13 +18,8 @@ export class MainDashComponent {
   searchTerms = [""];
 
   doSearch(onInputEvt) {
-    this.searchTerms = onInputEvt.target.value.split(",");
-    if (this.searchTerms.length == 1 && this.searchTerms[0].trim() == "") {
-      //Empty search -> show all (already happens)
-    }
-    else {
-      this.searchTerms = this.searchTerms.filter(st => st.trim() != ""); //Otherwise, remove empty terms so a comma at end of input doesn't return all
-    }
+    this.searchTerms = onInputEvt.target.value.split(/[,; ]/);
+    this.searchTerms = this.searchTerms.filter(st => st.trim() != ""); //Remove empty terms so a comma at end of input doesn't return all
     // this.lc_filtered = this.lectCards.pipe(
     //   debounceTime(300),
     //   map((vidArray: Array<VideoJson>) => {
@@ -38,11 +33,27 @@ export class MainDashComponent {
     // );
   }
 
-  shouldShow(title) {
+  tagSearchPrefix = "#";
+
+  shouldShow(title, tags) {
+    console.log(this.searchTerms);
+    if (this.searchTerms.length == 0 || (this.searchTerms.length == 1 && this.searchTerms[0].trim() == "")) return true; //Show all items for empty search
     for (var searchTerm of this.searchTerms) {
-      if (title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) != -1) return true;
+      searchTerm = searchTerm.trim().toLowerCase();
+      if (!searchTerm.startsWith(this.tagSearchPrefix)) { //Normal search terms
+        if (title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1) return false;
+      }
+      else { //Tags
+        var tagValue = searchTerm.substring(this.tagSearchPrefix.length);
+        if (tagValue != "") {
+          for (var tag of tags) {
+            if (tag.toLowerCase().indexOf(tagValue) != -1) return true;
+          }
+          return false;
+        }
+      }
     }
-    return false;
+    return true;
   }
 
   constructor(private breakpointObserver: BreakpointObserver, lectureService: LectureService) {

@@ -2,7 +2,7 @@
   <input id="searchBar" type="text" placeholder="Search..." (input)="doSearch($event)"/>
   <mat-grid-list [cols]="numCols" [rowHeight]="rowHeight">
     <ng-container *ngFor="let card of lectCards | async; let idx = index">
-      <mat-grid-tile *ngIf="shouldShow(card.title)" [colspan]="1" [rowspan]="1">
+      <mat-grid-tile *ngIf="shouldShow(card.title, card.tags)" [colspan]="1" [rowspan]="1">
         <mat-card class="dashboard-card" routerLink="viewLecture/{{idx}}">
           <mat-card-header>
             <mat-card-title class="titleText">

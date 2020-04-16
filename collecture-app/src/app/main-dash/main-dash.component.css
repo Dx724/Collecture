@@ -45,3 +45,8 @@
   border-radius: 5px;
   border: 1px #cecece solid;
 }
+
+#searchBar:focus {
+  outline: none;
+  box-shadow: 0px 0px 3px #0077ff;
+}
