@@ -1,0 +1,12 @@
+.vidTag {
+    background-color: cornflowerblue;
+    padding: 4px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 3px;
+}
+
+.vidTagList {
+    white-space: nowrap;
+    overflow-x: auto;
+}

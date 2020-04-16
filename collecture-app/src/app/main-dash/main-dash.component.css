@@ -19,3 +19,22 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+::ng-deep .mat-card-header-text {
+  overflow: hidden;
+  margin-left: 0 !important;
+  margin-right: 20px !important; 
+}
+
+.titleText {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: normal;
+}
+
+.vidImage {
+  height: 62%; /* Go from 4:3 to 16:9 */
+  object-fit: cover;
+}

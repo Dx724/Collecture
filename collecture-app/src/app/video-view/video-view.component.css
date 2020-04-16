@@ -1,0 +1,17 @@
+.loadError {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+.contentCenterer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    flex-direction: column;
+}
+
+#vidTitle {
+    font-size: 1.5rem;
+}

@@ -1,3 +1,16 @@
+#topBar {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    cursor: pointer;
+}
+
 #appTitle {
     font-size: 2rem;
+    padding: 1rem;
+    color: #464646;
+}
+
+#appTitle:hover {
+    color: #707070;
 }

@@ -13,12 +13,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VideoViewComponent } from './video-view/video-view.component';
+import { TagListComponent } from './tag-list/tag-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainDashComponent,
-    TopBarComponent
+    TopBarComponent,
+    VideoViewComponent,
+    TagListComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
