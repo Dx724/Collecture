@@ -15,7 +15,11 @@
               </mat-menu>-->
             </mat-card-title>
           </mat-card-header>
-          <img mat-card-image class="vidImage" [src]="'https://img.youtube.com/vi/' + card.ytId + '/0.jpg'" alt="Video Image"/>
+          <div class="imageContainer">
+            <div>
+              <img mat-card-image class="vidImage" [src]="'https://img.youtube.com/vi/' + card.ytId + '/0.jpg'" alt="Video Image"/>
+            </div>
+          </div>
           <mat-card-footer class="dashboard-card-content">
             <app-tag-list [tags]="card.tags"></app-tag-list>
           </mat-card-footer>

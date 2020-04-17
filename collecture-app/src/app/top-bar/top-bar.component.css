@@ -22,6 +22,7 @@
     font-size: 1.75rem;
     border-radius: 5px;
     border: 1px #cecece solid;
+    min-width: 30px;
 }
 
 #searchBar:focus, .dashboard-card:focus { /* Dash card focus used to prevent tag list from affecting outline shape */

@@ -32,7 +32,7 @@ export class LectureService {
   }
 
   setActiveTitle(newTitle) {
-    console.log("Set title", newTitle);
+    //console.log("Set title", newTitle);
     this.activeTitleObservable.next(newTitle);
   }
 

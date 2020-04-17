@@ -14,7 +14,7 @@ export class MainDashComponent {
   /** Based on the screen size, switch from standard to one column per row */
   numCols = 2;
   lectCards;
-  rowHeight = ""; //Define this as an empty string to keep the cards as squares
+  rowHeight = "10:11"; //Define this as an empty string to keep the cards as squares
   searchTerms = [""];
 
   /*
@@ -60,9 +60,21 @@ export class MainDashComponent {
   }
 
   constructor(private breakpointObserver: BreakpointObserver, private lectureService: LectureService) {
-    this.breakpointObserver.observe(Breakpoints.Handset).subscribe(
-      result => {this.numCols = result.matches ? 2 : 4;}
+    this.breakpointObserver.observe([Breakpoints.Large]).subscribe(
+      result => {
+        this.numCols = result.matches ? 4 : 2;
+      }
     );
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(
+      result => {
+        this.rowHeight = result.matches ? "10:11" : "10:10";
+      }
+    );
+    /*this.breakpointObserver.observe("(orientation: portrait)").subscribe(
+      result => {
+        this.rowHeight = result.matches ? "10:11" : "1:1.1";
+      }
+    );*/
 
     this.lectCards = lectureService.getVideos();
   }

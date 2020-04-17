@@ -25,7 +25,7 @@ export class TopBarComponent implements OnInit {
     this.router.events.subscribe(() => this.searchVisible = this.router.url == "/");
     this.lectService.getActiveTitle().subscribe({next: (titleText: string) => {
       this.centerText = titleText;
-      console.log("MapGet", titleText);
+      //console.log("MapGet", titleText);
     }});
   }
 

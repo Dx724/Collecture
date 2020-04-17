@@ -14,6 +14,8 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  cursor: pointer;
+  padding-top: 10px; /* subtract some here so title can have bottom-margin */
 }
 
 .more-button {
@@ -24,6 +26,7 @@
 
 .dashboard-card-content {
   text-align: center;
+  margin-top: 75%;
 }
 
 ::ng-deep .mat-card-header-text {
@@ -38,11 +41,29 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   line-height: normal;
+  font-size: 3vmin;
+  margin-bottom: 5px !important;
+}
+
+.imageContainer {
+  width: 100%;
+  padding-bottom: 59%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+}
+.imageContainer > div {
+  position: absolute;
+  top: -12.5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .vidImage {
-  height: 62%; /* Go from 4:3 to 16:9 */
-  object-fit: cover;
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .dashboard-card:focus {
