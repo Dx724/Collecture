@@ -1,3 +1,6 @@
 #aboutContainer {
     padding: 3vmin;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 90vw;
 }

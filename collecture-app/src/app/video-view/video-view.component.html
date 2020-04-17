@@ -1,7 +1,7 @@
 <h3 *ngIf="videoInfo && videoInfo.error" class="loadError">Error loading video</h3>
 <div *ngIf="videoInfo && !videoInfo.error">
     <div class="contentCenterer">
-        <h3 id="vidTitle">{{videoInfo.title}}</h3>
+        <!--<h3 id="vidTitle">{{videoInfo.title}}</h3> Moved to top-bar.component-->
         <iframe id="ytplayer" type="text/html" width="720" height="405"
         [src]="videoUrl" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <app-tag-list [tags]="videoInfo.tags"></app-tag-list>

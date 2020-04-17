@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDividerModule, MatDivider } from '@angular/material/divider';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -38,7 +39,8 @@ import { AboutComponent } from './about/about.component';
     MatButtonModule,
     LayoutModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

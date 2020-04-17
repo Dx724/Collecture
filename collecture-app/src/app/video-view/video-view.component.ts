@@ -16,10 +16,12 @@ export class VideoViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
+      //this.lectureService.setActiveTitle("");
       this.lectureService.getVideoById(+params.get("vidId")).subscribe((vidData) => {
-        console.log("VidData", vidData);
+        //console.log("VidData", vidData);
         if (vidData) {
           this.videoInfo = vidData;
+          this.lectureService.setActiveTitle(vidData.title);
           if (vidData.ytId) {
             this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube-nocookie.com/embed/" + vidData.ytId + "?modestbranding=1&start=0&color=white");
           }

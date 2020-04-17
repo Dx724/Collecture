@@ -9,6 +9,14 @@
     font-size: 2rem;
 }
 
+#spacer {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 2.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 #searchBar {
     flex: 1 1 auto;
     font-size: 1.75rem;

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { of } from 'rxjs';
 import { map, share } from 'rxjs/operators';
 
@@ -17,6 +17,7 @@ export class LectureService {
   loadedData; //Only load once
   activeObservable;
   currentSearchTerms = [];
+  activeTitleObservable = new Subject();
 
   getSearchTerms() {
     return this.currentSearchTerms;
@@ -24,6 +25,15 @@ export class LectureService {
 
   setSearchTerms(searchTerms) {
     this.currentSearchTerms = searchTerms;
+  }
+
+  getActiveTitle() {
+    return this.activeTitleObservable;
+  }
+
+  setActiveTitle(newTitle) {
+    console.log("Set title", newTitle);
+    this.activeTitleObservable.next(newTitle);
   }
 
 

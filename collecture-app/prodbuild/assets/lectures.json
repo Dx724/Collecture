@@ -1,63 +1,41 @@
 [
     {
-        "title": "Test 1",
-        "image": "assets/img/placeholder.png",
+        "title": "Into the Columbia Blue",
+        "ytId": "R-O6z1PaChE",
         "tags": [
-            "testTag1"
+            "columbia"
         ]
     },
     {
-        "title": "Test 2",
-        "image": "assets/img/placeholder.png",
-        "tags": []
-    },
-    {
-        "title": "Sam's Physics Class",
-        "image": "assets/img/placeholder.png",
+        "title": "Bell's Inequality",
+        "ytId": "qd-tKr0LJTM",
         "tags": [
-            "Homework Optional",
-            "No Midterm Curve",
-            "We think about the doctors",
-            "Innovative F/F grading"
+            "quantum-mechanics"
         ]
     },
     {
-        "title": "Test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-        "image": "assets/img/placeholder.png",
-        "tags": []
-    },
-    {
-        "title": "Tags",
-        "image": "assets/img/placeholder.png",
+        "title": "Post-World War I Recovery",
+        "ytId": "xzWL2XPBHMk",
         "tags": [
-            "Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Big Big Big Big Big Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Big Big Big Big Big Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Tag",
-            "Big Big Big Big Big Tag"
-        ],
-        "embedUrl": ""
+            "WWI",
+            "crash-course",
+            "european-history"
+        ]
     },
     {
-        "title": "SongVid",
-        "tags": ["Song"],
-        "ytId": "ILbTt1P6RNg"
+        "title": "Differential Equations Lecture 1",
+        "ytId": "XDhJ8lVGbl8",
+        "tags": [
+            "MIT",
+            "18.03"
+        ]
     },
     {
-        "title": "Lecture #3",
-        "tags": ["5"]
+        "title": "How to Write a Paper in a Weekend",
+        "ytId": "UY7sVKJPTMA",
+        "tags": [
+            "pete-carr",
+            "university-of-minnesota"
+        ]
     }
 ]
