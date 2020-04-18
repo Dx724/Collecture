@@ -62,8 +62,8 @@
 
 .vidImage {
   overflow: hidden;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0; /*TODO: see below*/
+  margin-right: 0; /*Note: using width:100% and then -10.25% and 54% makes nicer cropping, but less responsive (black bars)*/
 }
 
 .dashboard-card:focus {

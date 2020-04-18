@@ -1,0 +1,16 @@
+h1 {
+    font-size: 3rem;
+    line-height: 110%;
+    text-align: center;
+    padding-top: 15vh;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 0.2vh;
+}
+
+a, a:visited {
+    color: #656565;
+}

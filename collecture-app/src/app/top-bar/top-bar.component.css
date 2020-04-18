@@ -9,6 +9,13 @@
 
 #appTitle {
     font-size: 2rem;
+    transform: translateX(-0.65rem);
+}
+
+#appIcon {
+    height: 2rem;
+    object-fit: contain;
+    transform: translateX(-25%);
 }
 
 #spacer {
@@ -42,13 +49,12 @@
 }
 
 .barLink {
-    /*color: #464646;*/
-    color: black;
+    color: #464646;
     cursor: pointer;
     padding: 1rem;
     font-size: 1.25rem;
 }
 
 .barLink:hover {
-    color: #555555;
+    color: #707070;
 }

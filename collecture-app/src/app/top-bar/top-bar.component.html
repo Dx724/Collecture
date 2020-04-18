@@ -1,5 +1,8 @@
 <mat-toolbar id="topBar">
-    <span id="appTitle" routerLink="/" class="barLink" onfocus="this.blur()">Collecture</span>
+    <div id="appTitle" routerLink="/" class="barLink" onfocus="this.blur()">
+        <span *ngIf="!smallMode">Collecture</span>
+        <img *ngIf="smallMode" id="appIcon" src="favicon.ico" alt="Collecture Icon"/>
+    </div>
     <mat-form-field *ngIf="searchVisible" id="searchBar"> <!--Note: floatLabel is currently active, and floats off screen-->
         <mat-label>Search</mat-label>
         <mat-icon id="searchIcon" matPrefix>search</mat-icon>
