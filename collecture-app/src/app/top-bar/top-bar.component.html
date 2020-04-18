@@ -1,5 +1,5 @@
 <mat-toolbar id="topBar">
-    <div id="appTitle" routerLink="/" class="barLink" onfocus="this.blur()">
+    <div id="appTitle" [ngClass]="{'cGrow': !searchVisible}" routerLink="/" class="barLink" onfocus="this.blur()">
         <span *ngIf="!smallMode">Collecture</span>
         <img *ngIf="smallMode" id="appIcon" src="favicon.ico" alt="Collecture Icon"/>
     </div>
@@ -8,6 +8,6 @@
         <mat-icon id="searchIcon" matPrefix>search</mat-icon>
         <input matInput id="" type="text" placeholder="Try searching for titles or #tags..." (input)="doSearch($event)"/>
     </mat-form-field>
-    <span *ngIf="!searchVisible" id="spacer">{{centerText}}</span> <!--TODO: not centered-->
-    <span class="barLink" routerLink="/about" onfocus="this.blur()">About Us</span>
+    <span *ngIf="!searchVisible" id="spacer">{{centerText}}</span>
+    <span class="barLink" [ngClass]="{'cGrow': !searchVisible}" routerLink="/about" style="text-align: right;" onfocus="this.blur()">About Us</span>
 </mat-toolbar>
