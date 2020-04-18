@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: "", component: MainDashComponent},
   {path: "viewLecture/:vidId", component: VideoViewComponent},
   {path: "about", component: AboutComponent},
-  {path: "404.html", component: Error404Component}
+  {path: "**", component: Error404Component}
 ];
 
 @NgModule({

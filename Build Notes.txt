@@ -1,0 +1,2 @@
+Preserve CNAME
+Copy index.html as 404.html
