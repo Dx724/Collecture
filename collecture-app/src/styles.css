@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-y: hidden}
+
+::-moz-scrollbar-button:decrement,
+::-moz-scrollbar-button:increment,
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment {
+    width: 0px;
+}

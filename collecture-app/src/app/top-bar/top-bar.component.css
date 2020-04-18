@@ -3,6 +3,8 @@
     top: 0;
     z-index: 500;
     height: 3.25rem; /* Used in main-dash */
+    background-color: white;
+    box-shadow: 0px 3px 5px #535353;
 }
 
 #appTitle {
@@ -40,12 +42,13 @@
 }
 
 .barLink {
-    color: #464646;
+    /*color: #464646;*/
+    color: black;
     cursor: pointer;
     padding: 1rem;
     font-size: 1.25rem;
 }
 
 .barLink:hover {
-    color: #707070;
+    color: #555555;
 }

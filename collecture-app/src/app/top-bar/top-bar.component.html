@@ -3,7 +3,7 @@
     <mat-form-field *ngIf="searchVisible" id="searchBar"> <!--Note: floatLabel is currently active, and floats off screen-->
         <mat-label>Search</mat-label>
         <mat-icon id="searchIcon" matPrefix>search</mat-icon>
-        <input matInput id="" type="text" placeholder="Search..." (input)="doSearch($event)"/>
+        <input matInput id="" type="text" placeholder="Try searching for titles or #tags..." (input)="doSearch($event)"/>
     </mat-form-field>
     <span *ngIf="!searchVisible" id="spacer">{{centerText}}</span>
     <span class="barLink" routerLink="/about" onfocus="this.blur()">About Us</span>
