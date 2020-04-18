@@ -12,17 +12,26 @@
 #spacer {
     flex: 1 1 auto;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+#searchIcon {
+    font-size: 1.5rem;
+    transform: translateY(0.25rem);
+}
+
 #searchBar {
     flex: 1 1 auto;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     border-radius: 5px;
-    border: 1px #cecece solid;
+    border: none;/*1px #cecece solid;*/
     min-width: 30px;
+}
+
+#searchBar > input {
+    padding: 0;
 }
 
 #searchBar:focus, .dashboard-card:focus { /* Dash card focus used to prevent tag list from affecting outline shape */
