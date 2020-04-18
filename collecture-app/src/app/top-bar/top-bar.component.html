@@ -8,6 +8,6 @@
         <mat-icon id="searchIcon" matPrefix>search</mat-icon>
         <input matInput id="" type="text" placeholder="Try searching for titles or #tags..." (input)="doSearch($event)"/>
     </mat-form-field>
-    <span *ngIf="!searchVisible" id="spacer">{{centerText}}</span>
+    <span *ngIf="!searchVisible" id="spacer">{{centerText}}</span> <!--TODO: not centered-->
     <span class="barLink" routerLink="/about" onfocus="this.blur()">About Us</span>
 </mat-toolbar>
