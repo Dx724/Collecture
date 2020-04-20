@@ -21,6 +21,7 @@ import { VideoViewComponent } from './video-view/video-view.component';
 import { TagListComponent } from './tag-list/tag-list.component';
 import { AboutComponent } from './about/about.component';
 import { Error404Component } from './error404/error404.component';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Error404Component } from './error404/error404.component';
     VideoViewComponent,
     TagListComponent,
     AboutComponent,
-    Error404Component
+    Error404Component,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

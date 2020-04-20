@@ -1,6 +1,6 @@
 <div class="grid-container" id="gridBox">
   <mat-grid-list [cols]="numCols" [rowHeight]="rowHeight">
-    <ng-container *ngFor="let card of lectCards | async; let idx = index">
+    <ng-container *ngFor="let card of lectCards | async | reverse; let idx = index">
       <mat-grid-tile *ngIf="shouldShow(card.title, card.tags)" [colspan]="1" [rowspan]="1">
         <mat-card class="dashboard-card" routerLink="viewLecture/{{idx}}">
           <mat-card-header>
