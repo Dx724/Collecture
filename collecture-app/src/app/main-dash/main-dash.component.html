@@ -4,8 +4,8 @@
       <mat-grid-tile *ngIf="shouldShow(card.title, card.tags)" [colspan]="1" [rowspan]="1">
         <mat-card class="dashboard-card" routerLink="viewLecture/{{len - idx - 1}}">
           <mat-card-header #titleContainer>
-            <mat-card-title class="titleText">
-              <p class="titleText">{{card.title}}</p>
+            <mat-card-title class="titleTextParent">
+              <p [appFittext]=3 class="titleText">{{card.title}}</p>
               <!--<button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                 <mat-icon>more_vert</mat-icon>
               </button>

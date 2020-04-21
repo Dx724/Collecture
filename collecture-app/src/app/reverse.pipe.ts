@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ReversePipe implements PipeTransform {
 
   transform(value: Array<Object>, ...args: unknown[]): unknown {
-    return value.slice().reverse();
+    return value ? value.slice().reverse() : null; //Don't slice a null input
   }
 
 }

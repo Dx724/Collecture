@@ -22,6 +22,7 @@ import { TagListComponent } from './tag-list/tag-list.component';
 import { AboutComponent } from './about/about.component';
 import { Error404Component } from './error404/error404.component';
 import { ReversePipe } from './reverse.pipe';
+import { FittextDirective } from './fittext.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReversePipe } from './reverse.pipe';
     TagListComponent,
     AboutComponent,
     Error404Component,
-    ReversePipe
+    ReversePipe,
+    FittextDirective
   ],
   imports: [
     BrowserModule,
