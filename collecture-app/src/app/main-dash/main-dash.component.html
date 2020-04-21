@@ -1,9 +1,9 @@
 <div class="grid-container" id="gridBox">
   <mat-grid-list [cols]="numCols" [rowHeight]="rowHeight">
-    <ng-container *ngFor="let card of lectCards | async | reverse; let idx = index">
+    <ng-container *ngFor="let card of lectCards | async | reverse; let idx = index; let len = count">
       <mat-grid-tile *ngIf="shouldShow(card.title, card.tags)" [colspan]="1" [rowspan]="1">
-        <mat-card class="dashboard-card" routerLink="viewLecture/{{idx}}">
-          <mat-card-header>
+        <mat-card class="dashboard-card" routerLink="viewLecture/{{len - idx - 1}}">
+          <mat-card-header #titleContainer>
             <mat-card-title class="titleText">
               <p class="titleText">{{card.title}}</p>
               <!--<button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">

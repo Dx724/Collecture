@@ -33,6 +33,7 @@
   overflow: hidden;
   margin-left: 0 !important;
   margin-right: 0px !important; /*Make 20px if using button*/
+  width: 100%;
 }
 
 .titleText {
