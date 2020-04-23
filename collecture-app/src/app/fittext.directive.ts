@@ -10,6 +10,7 @@ export class FittextDirective {
   incrementSize = 0.1;
   resizeTimeout = null;
   minSize = 0.1;
+  minPx = 8;
 
   @HostListener("window:resize")
   doResize() {
@@ -35,8 +36,15 @@ export class FittextDirective {
       if (targetSize < this.minSize) {
         elem.style.fontSize = this.minSize + this.unit;
       }
+      if (this.vminToPx(targetSize) < this.minPx) {
+        elem.style.fontSize = this.minPx + "px";
+      }
       this.el.nativeElement.style.opacity = 1;
     }).bind(this), 200);
+  }
+
+  vminToPx(vmins) {
+    return vmins / 100 * Math.min(window.innerWidth, window.innerHeight);
   }
 
   constructor(private el: ElementRef) {

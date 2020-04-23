@@ -41,18 +41,19 @@
   /*font-size: 3vmin; -> Using appFittext instead*/
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: normal;
   opacity: 0;
 }
 
+/*
 .titleTextParent {
-  line-height: 3vmin;
 }
+*/
 
 .titleText, .titleTextParent {
   width: 100%;
   margin-bottom: 5px !important;
   overflow: hidden;
+  line-height: 4vmin; /* Should equal appFittext max/default size plus a little bit */
 }
 
 .imageContainer {
