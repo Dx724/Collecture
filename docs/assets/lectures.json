@@ -37,5 +37,89 @@
             "pete-carr",
             "university-of-minnesota"
         ]
+    },
+    {
+        "title": "Achieving Your Childhood Dreams",
+        "ytId": "ji5_MqicxSo",
+        "tags": [
+            "last-lecture",
+            "randy-pausch",
+            "CMU",
+            "personal-goals"
+        ]
+    },
+    {
+        "title": "Power and Politics in Today's World",
+        "ytId": "BDqvzFY72mg",
+        "tags": [
+            "politics",
+            "yale",
+            "ian-shapiro"
+        ]
+    },
+    {
+        "title": "From Soviet Communism to Russian Gangster Communism",
+        "ytId": "f5nbT4xQqwI",
+        "tags": [
+            "russia",
+            "communism",
+            "capitalism",
+            "yale",
+            "ian-shapiro"
+        ]
+    },
+    {
+        "title": "Advent of a Unipolar World: NATO and EU Expansion",
+        "ytId": "s48b9B5gd88",
+        "tags": [
+            "NATO",
+            "EU",
+            "yale",
+            "ian-shapiro"
+        ]
+    },
+    {
+        "title": "How to Read a Case",
+        "ytId": "u9FDzeoT7SU",
+        "tags": [
+            "anne-coughlin",
+            "UVA",
+            "virginia",
+            "law"
+        ]
+    },
+    {
+        "title": "The Nature of Evolution: Selection, Inheritance, and History",
+        "ytId": "VjgHd6HKtvE",
+        "tags": [
+            "EEB122",
+            "yale"
+        ]
+    },
+    {
+        "title": "The Origin of the Vertebrate Nervous System",
+        "ytId": "232wtCuLsoI",
+        "tags": [
+            "evolutionary-biology",
+            "harvard"
+        ]
+    },
+    {
+        "title": "Darwin and the Origin of Species II",
+        "ytId": "ZcSQW9b3Mdg",
+        "tags": [
+            "evolution",
+            "biology-1B",
+            "berkeley"
+        ]
+    },
+    {
+        "title": "Darwin and the Origin of Species I",
+        "ytId": "MUD4sg4gYXQ",
+        "tags": [
+            "evolution",
+            "biology-1B",
+            "berkeley"
+        ]
     }
 ]
