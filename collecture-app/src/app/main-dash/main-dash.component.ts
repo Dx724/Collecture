@@ -37,20 +37,17 @@ export class MainDashComponent {
 
   tagSearchPrefix = "#"; //Also used to display tags in tag-list.component
 
-  shouldShow(title, tags) {
+  shouldShow(title, tags) { //Searches within tags and titles (however "#tag" will only match "#tag" and not "tag" in a title)
     this.searchTerms = this.lectureService.getSearchTerms();
     if (this.searchTerms.length == 0 || (this.searchTerms.length == 1 && this.searchTerms[0].trim() == "")) return true; //Show all items for empty search
     for (var searchTerm of this.searchTerms) {
       searchTerm = searchTerm.trim().toLowerCase();
-      if (!searchTerm.startsWith(this.tagSearchPrefix)) { //Normal search terms !searchTerm.startsWith(this.tagSearchPrefix)
-        if (title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1) return false;
-      }
-      else { //Tags
-        var tagValue = searchTerm.substring(this.tagSearchPrefix.length);
-        if (tagValue != "" && title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1) {  //Can also match on title (so "Lecture #3" still matched) 
+      if (title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1) { //If search term not found in title, can also check tags [searchTerm.startsWith(this.tagSearchPrefix) && ]
+        var tagValue = searchTerm.substring(searchTerm.startsWith(this.tagSearchPrefix) ? this.tagSearchPrefix.length : 0);
+        if (tagValue != "") {  //Can also match on title (so "Lecture #3" still matched) [ && title.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) == -1]
           var tagMatched = false;
           for (var tag of tags) {
-            if (tag.toLowerCase().indexOf(tagValue) != -1) tagMatched = true;
+            if (tag.toLowerCase().indexOf(tagValue) != -1) tagMatched = true; //Should explicit tags (including prefix) only match if index returns 0? (#3 match #18.03?, #-lab match #physics-lab and #chemistry-lab?)
           }
           if (!tagMatched) return false;
         }
