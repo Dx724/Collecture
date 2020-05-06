@@ -23,6 +23,10 @@ import { AboutComponent } from './about/about.component';
 import { Error404Component } from './error404/error404.component';
 import { ReversePipe } from './reverse.pipe';
 import { FittextDirective } from './fittext.directive';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ShareButtonsModule } from '@ngx-share/buttons';
+import { ShareButtonModule, ShareButton } from '@ngx-share/button';
+import { PlatformModule } from '@angular/cdk/platform';
 
 @NgModule({
   declarations: [
@@ -50,7 +54,11 @@ import { FittextDirective } from './fittext.directive';
     HttpClientModule,
     MatDividerModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FontAwesomeModule,
+    ShareButtonsModule,
+    ShareButtonModule,
+    PlatformModule
   ],
   providers: [],
   bootstrap: [AppComponent]
