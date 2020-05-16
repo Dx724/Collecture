@@ -4,3 +4,11 @@
     line-height: 1.5rem;
     width: 90vw;
 }
+
+.shareButton {
+    margin-right: 3px;
+}
+
+.shareContainer {
+    margin-left: 10px;
+}
